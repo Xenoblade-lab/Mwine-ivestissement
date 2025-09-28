@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvestCorp - Investissement Multi-Sectoriel</title>
+    <link rel="stylesheet" href="styles4.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#accueil" aria-label="Page d'accueil">
+                    <img src="./WhatsApp Image 2025-09-19 à 20.24.45_8dddc34b.jpg" alt="Logo de l'entreprise" />
+                    <span class="sr-only">InvestCorp</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#secteurs" class="nav-link">Secteurs</a></li>
+                <li><a href="#apropos" class="nav-link">À Propos</a></li>
+                <li><a href="#impact" class="nav-link">Impact</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Investir dans l'Avenir, Construire le Changement</h1>
+            <p class="hero-subtitle">Nous investissons dans des secteurs stratégiques pour créer un impact positif durable et favoriser le développement inclusif.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">Découvrir nos Projets</button>
+                <button class="btn-secondary">En Savoir Plus</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="/placeholder.svg?height=500&width=600" alt="Innovation et investissement">
+        </div>
+    </section>
+
+    <!-- Secteurs Section -->
+    <section id="secteurs" class="sectors">
+        <div class="container">
+            <h2 class="section-title">Nos Secteurs d'Investissement</h2>
+            <p class="section-subtitle">Nous nous concentrons sur des domaines stratégiques qui façonnent l'avenir</p>
+            
+            <div class="sectors-grid">
+                <div class="sector-card" data-sector="tech">
+                    <div class="sector-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3>Innovation Technologique</h3>
+                    <p>Investissement dans les technologies émergentes et les solutions numériques innovantes.</p>
+                </div>
+
+                <div class="sector-card" data-sector="agriculture">
+                    <div class="sector-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3>Agriculture</h3>
+                    <p>Développement de l'agriculture durable et des technologies agricoles modernes.</p>
+                </div>
+
+                <div class="sector-card" data-sector="energy">
+                    <div class="sector-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
+                    <h3>Énergie</h3>
+                    <p>Investissement dans les énergies renouvelables et les solutions énergétiques durables.</p>
+                </div>
+
+                <div class="sector-card" data-sector="community">
+                    <div class="sector-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Développement Communautaire</h3>
+                    <p>Projets visant à améliorer la qualité de vie des communautés locales.</p>
+                </div>
+
+                <div class="sector-card" data-sector="environment">
+                    <div class="sector-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                            <path d="M8 12h8"/>
+                            <path d="M12 8v8"/>
+                        </svg>
+                    </div>
+                    <h3>Environnement</h3>
+                    <p>Solutions environnementales et projets de conservation de la biodiversité.</p>
+                </div>
+
+                <div class="sector-card" data-sector="transport">
+                    <div class="sector-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>
+                            <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>
+                            <path d="M5 17h-2v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2"/>
+                            <path d="M9 17v-6h4v6"/>
+                        </svg>
+                    </div>
+                    <h3>Transports</h3>
+                    <p>Mobilité durable et solutions de transport innovantes et écologiques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À Propos Section -->
+    <section id="apropos" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Notre Mission</h2>
+                    <p>Chez InvestCorp, nous croyons que l'investissement responsable peut transformer le monde. Notre approche se concentre sur trois piliers fondamentaux :</p>
+                    
+                    <div class="pillars">
+                        <div class="pillar">
+                            <h4>Innovation</h4>
+                            <p>Nous soutenons les technologies et solutions qui révolutionnent les industries traditionnelles.</p>
+                        </div>
+                        <div class="pillar">
+                            <h4>Développement Inclusif</h4>
+                            <p>Nos investissements visent à créer des opportunités pour tous, sans exception.</p>
+                        </div>
+                        <div class="pillar">
+                            <h4>Responsabilité Sociale</h4>
+                            <p>Chaque projet contribue positivement à la société et à l'environnement.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="/placeholder.svg?height=400&width=500" alt="Notre équipe">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact">
+        <div class="container">
+            <h2 class="section-title">Notre Impact</h2>
+            <p class="section-subtitle">Des résultats concrets qui transforment les communautés</p>
+            
+            <div class="impact-stats">
+                <div class="stat">
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-label">Projets Financés</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" data-target="50000">0</div>
+                    <div class="stat-label">Emplois Créés</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" data-target="25">0</div>
+                    <div class="stat-label">Pays d'Intervention</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" data-target="2">0</div>
+                    <div class="stat-label">Milliards € Investis</div>
+                </div>
+            </div>
+
+            <div class="impact-stories">
+                <div class="story">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Projet énergie solaire">
+                    <div class="story-content">
+                        <h3>Énergie Solaire au Sénégal</h3>
+                        <p>Installation de 50 MW de capacité solaire, alimentant 100,000 foyers en énergie propre.</p>
+                    </div>
+                </div>
+                <div class="story">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Agriculture moderne">
+                    <div class="story-content">
+                        <h3>Agriculture Intelligente</h3>
+                        <p>Technologies IoT déployées sur 10,000 hectares, augmentant les rendements de 40%.</p>
+                    </div>
+                </div>
+                <div class="story">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Éducation numérique">
+                    <div class="story-content">
+                        <h3>Éducation Numérique</h3>
+                        <p>Plateforme d'apprentissage accessible à 500,000 étudiants dans 15 pays.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-Nous</h2>
+            <p class="section-subtitle">Discutons de vos projets d'investissement</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>Adresse</h4>
+                        <p>123 Avenue des Investisseurs<br>75001 Paris, France</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Téléphone</h4>
+                        <p>+33 1 23 45 67 89</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <p>contact@investcorp.fr</p>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Envoyer le Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>InvestCorp</h3>
+                    <p>Investir dans l'avenir, construire le changement. Nous créons un impact positif à travers des investissements responsables et durables.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Secteurs</h4>
+                    <ul>
+                        <li><a href="#secteurs">Technologie</a></li>
+                        <li><a href="#secteurs">Agriculture</a></li>
+                        <li><a href="#secteurs">Énergie</a></li>
+                        <li><a href="#secteurs">Transport</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="#apropos">À Propos</a></li>
+                        <li><a href="#impact">Notre Impact</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Carrières</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 InvestCorp. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
