@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InvestCorp - Investissement Multi-Sectoriel</title>
+    <title>MWINE Investments - Investissement Multi-Sectoriel</title>
     <link rel="stylesheet" href="styles4.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -32,18 +32,93 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section avec Diaporama -->
     <section id="accueil" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Investir dans l'Avenir, Construire le Changement</h1>
-            <p class="hero-subtitle">Nous investissons dans des secteurs stratégiques pour créer un impact positif durable et favoriser le développement inclusif.</p>
-            <div class="hero-buttons">
-                <button class="btn-primary">Découvrir nos Projets</button>
-                <button class="btn-secondary">En Savoir Plus</button>
+        <div class="hero-slider">
+            <div class="slide active">
+                <div class="slide-image">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=600&fit=crop" alt="Bâtiments & infrastructures durables">
+                </div>
+                <div class="slide-content">
+                    <h1 class="hero-title">Bâtiments & Infrastructures Durables</h1>
+                    <p class="hero-subtitle">Construction d'infrastructures modernes et durables pour le développement de l'Afrique.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary">Découvrir nos Projets</button>
+                        <button class="btn-secondary">En Savoir Plus</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide">
+                <div class="slide-image">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&h=600&fit=crop" alt="Agriculture & agro-industrie">
+                </div>
+                <div class="slide-content">
+                    <h1 class="hero-title">Agriculture & Agro-Industrie</h1>
+                    <p class="hero-subtitle">Modernisation de l'agriculture africaine avec des technologies innovantes.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary">Découvrir nos Projets</button>
+                        <button class="btn-secondary">En Savoir Plus</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide">
+                <div class="slide-image">
+                    <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=1200&h=600&fit=crop" alt="Énergie solaire & transition">
+                </div>
+                <div class="slide-content">
+                    <h1 class="hero-title">Énergie Solaire & Transition</h1>
+                    <p class="hero-subtitle">Développement des énergies renouvelables pour un avenir durable.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary">Découvrir nos Projets</button>
+                        <button class="btn-secondary">En Savoir Plus</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide">
+                <div class="slide-image">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=600&fit=crop" alt="Environnement & reforestation">
+                </div>
+                <div class="slide-content">
+                    <h1 class="hero-title">Environnement & Reforestation</h1>
+                    <p class="hero-subtitle">Protection de l'environnement et reforestation pour un écosystème durable.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary">Découvrir nos Projets</button>
+                        <button class="btn-secondary">En Savoir Plus</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide">
+                <div class="slide-image">
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&h=600&fit=crop" alt="Transport & logistique">
+                </div>
+                <div class="slide-content">
+                    <h1 class="hero-title">Transport & Logistique</h1>
+                    <p class="hero-subtitle">Amélioration des réseaux de transport et de la logistique en Afrique.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary">Découvrir nos Projets</button>
+                        <button class="btn-secondary">En Savoir Plus</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="hero-image">
-            <img src="investisement_et_innovatiion.jpg" alt="Innovation et investissement">
+        
+        <!-- Contrôles du diaporama -->
+        <div class="slider-controls">
+            <button class="prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next-btn" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        
+        <!-- Indicateurs -->
+        <div class="slider-indicators">
+            <span class="indicator active" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
+            <span class="indicator" onclick="currentSlide(4)"></span>
+            <span class="indicator" onclick="currentSlide(5)"></span>
         </div>
     </section>
 
@@ -69,7 +144,9 @@
                 <div class="sector-card" data-sector="agriculture">
                     <div class="sector-icon">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
                         </svg>
                     </div>
                     <h3>Agriculture</h3>
@@ -102,9 +179,10 @@
                 <div class="sector-card" data-sector="environment">
                     <div class="sector-icon">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                            <path d="M8 12h8"/>
-                            <path d="M12 8v8"/>
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                            <circle cx="12" cy="12" r="3"/>
                         </svg>
                     </div>
                     <h3>Environnement</h3>
@@ -232,16 +310,17 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <h4>Adresse</h4>
-                        <p>Siège Social<br>Afrique</p>
+                        <h4>Adresses</h4>
+                        <p><strong>Kinshasa :</strong><br>Avenue de l'Equateur, 25<br>Commune de la GOMBE<br>(immeuble MK, 5e niveau)</p>
+                        <p><strong>Nairobi :</strong><br>KMACENTRE, Upper Hill</p>
                     </div>
                     <div class="contact-item">
-                        <h4>Téléphone</h4>
-                        <p>+XXX XX XXX XXXX</p>
+                        <h4>Téléphones</h4>
+                        <p>+243 810 850 209<br>+254 711 528 039</p>
                     </div>
                     <div class="contact-item">
                         <h4>Email</h4>
-                        <p>contact@mwine-investments.com</p>
+                        <p>mwineinvestments@gmail.com</p>
                     </div>
                 </div>
                 
@@ -269,8 +348,9 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>InvestCorp</h3>
+                    <h3>MWINE Investments</h3>
                     <p>Investir dans l'avenir, construire le changement. Nous créons un impact positif à travers des investissements responsables et durables.</p>
+                    <p><strong>Site web :</strong> www.mi.com</p>
                 </div>
                 <div class="footer-section">
                     <h4>Secteurs</h4>
@@ -300,7 +380,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 InvestCorp. Tous droits réservés.</p>
+                <p>&copy; 2024 MWINE Investments. Tous droits réservés. | www.mi.com</p>
             </div>
         </div>
     </footer>

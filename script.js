@@ -214,3 +214,69 @@ function preloadImages() {
 
 // Lancer le préchargement après le chargement de la page
 window.addEventListener("load", preloadImages)
+
+// Fonctionnalité du diaporama
+let currentSlideIndex = 0
+const slides = document.querySelectorAll('.slide')
+const indicators = document.querySelectorAll('.indicator')
+
+function showSlide(index) {
+  // Masquer toutes les slides
+  slides.forEach(slide => slide.classList.remove('active'))
+  indicators.forEach(indicator => indicator.classList.remove('active'))
+  
+  // Afficher la slide courante
+  if (slides[index]) {
+    slides[index].classList.add('active')
+    indicators[index].classList.add('active')
+  }
+}
+
+function changeSlide(direction) {
+  currentSlideIndex += direction
+  
+  if (currentSlideIndex >= slides.length) {
+    currentSlideIndex = 0
+  } else if (currentSlideIndex < 0) {
+    currentSlideIndex = slides.length - 1
+  }
+  
+  showSlide(currentSlideIndex)
+}
+
+function currentSlide(index) {
+  currentSlideIndex = index - 1
+  showSlide(currentSlideIndex)
+}
+
+// Auto-play du diaporama
+let slideInterval
+
+function startSlideShow() {
+  slideInterval = setInterval(() => {
+    changeSlide(1)
+  }, 5000) // Change de slide toutes les 5 secondes
+}
+
+function stopSlideShow() {
+  clearInterval(slideInterval)
+}
+
+// Initialiser le diaporama
+document.addEventListener('DOMContentLoaded', () => {
+  if (slides.length > 0) {
+    showSlide(0)
+    startSlideShow()
+    
+    // Pause au survol
+    const heroSection = document.querySelector('.hero')
+    if (heroSection) {
+      heroSection.addEventListener('mouseenter', stopSlideShow)
+      heroSection.addEventListener('mouseleave', startSlideShow)
+    }
+  }
+})
+
+// Rendre les fonctions globales pour les boutons HTML
+window.changeSlide = changeSlide
+window.currentSlide = currentSlide
